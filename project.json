@@ -40,4 +40,20 @@
 "email": "bryefelk@gmail.com",
 "facebook": "https://www.facebook.com/bryl.langpawen.xv"
 }
+
+,"projects": [
+  {
+    "title": "Personal Portfolio",
+    "description": "My personal portfolio website.",
+    "technologies": "HTML, CSS, JavaScript, JSON",
+    "link": "https://brykibara.github.io/"
+  },
+  {
+  "title": "Unit Converter App",
+  "description": "A unit converter application developed using FlutterFlow. It converts different measurement units.",
+  "technologies": "FlutterFlow, Dart",
+  "link": "https://unit-converter-tjpnsa.flutterflow.app"
+}
+]
+
 }
