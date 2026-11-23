@@ -233,30 +233,30 @@ educationData.forEach(function(item) {
     console.error("Portfolio loading error:", error);
 }
 
+// DISPLAY PROJECTS
+const projectsList = document.getElementById("projectsList");
+
+if (projectsList && data.projects) {
+    projectsList.innerHTML = "";
+
+    data.projects.forEach(project => {
+        const projectBox = document.createElement("div");
+        projectBox.className = "project-item";
+
+        projectBox.innerHTML = `
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+            <p>${project.technologies}</p>
+            <a href="${project.link}" target="_blank" rel="noopener noreferrer">
+                View Project
+            </a>
+        `;
+
+        projectsList.appendChild(projectBox);
+    });
 }
-async function loadProjects() {
-  try {
-    const response = await fetch('./project.json');
-    const data = await response.json();
 
-    const projectsList = document.getElementById('projectsList');
 
-    projectsList.innerHTML = data.projects.map(project => `
-      <div class="project-item">
-        <h3>${project.title}</h3>
-        <p>${project.description}</p>
-        <p>${project.technologies}</p>
-        <a href="${project.link}" target="_blank">
-          View Project
-        </a>
-      </div>
-    `).join('');
 
-  } catch (error) {
-    console.error('Error loading projects:', error);
-  }
-}
-
-loadProjects();
 
 loadPortfolioData();
